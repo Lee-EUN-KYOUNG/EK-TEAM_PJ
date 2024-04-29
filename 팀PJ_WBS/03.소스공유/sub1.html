@@ -1,14 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TOY STORY1</title>
-  <link rel="shortcut icon" href="./IMG/favicon.png"/>
-</head>
-<body>
- <h1>토이스토리</h1>
-
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOY STORY1</title>
+    <link rel="shortcut icon" href="./IMG/favicon.png" />
+    <!-- 1.리액트 기본 라이브러리 -->
+    <script
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+      crossorigin
+    ></script>
+    <!-- 2.리액트 가상돔 라이브러리 -->
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+      crossorigin
+    ></script>
+    <!-- 3.리액트 바벨 라이브러리 -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- 서브1 메인 JS 불러오기 : 모듈로 불러오기 -->
+    <script type="module" src="./js/sub1_main.js"></script>
+    <link rel="stylesheet" href="./css/sub1_main.css" />
+  </head>
+  <body class="subbx">
+    <div id="top-area">
+      <div id="page-area">
+        <nav class="top-menu">
+          <ul>
+            <li>
+              <a href="#">TOY STORY 01 / 04</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div id="logobx-area">
+        <h1 class="mlogo">
+          <img src="./IMG/PIXAR_LOGO black.png" alt="메인로고" />
+        </h1>
+      </div>
+    </div>
+    <main class="main-area">
+      <section class="intro-area">
+        <h2 class="maintit">
+          To infinity <br />
+          And beyond
+        </h2>
+        <button class="gomain-btn">
+          <img src="./IMG/logo_black.png" alt="TOY STROY" />
+        </button>
+      </section>
+    </main>
+    <footer class="footer-area"></footer>
+  </body>
 </html>
