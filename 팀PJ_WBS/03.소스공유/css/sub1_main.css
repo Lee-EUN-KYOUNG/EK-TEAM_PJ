@@ -1,33 +1,94 @@
 
 @import url(./reset.css);
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+/* 폰트 연결 */
+/* 1.Dancing Script : 디즈니 스러운 손글씨 */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+/* 2.Lugrasimo */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lugrasimo&display=swap');
+/* 3. Pacifico */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lugrasimo&family=Pacifico&display=swap');
+/* 4. Lobster  */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lobster&family=Lugrasimo&family=Pacifico&display=swap');
+
+
+/************************************************* 공통부분 CSS 코딩 구역 *************************************************/
+
+  /* 공사중 표시 */
+/* * body * {
+    outline: 2px dashed #ccc;
+} */
+
+.subbx {
+    padding-top: 70px;
+}
+
+/************************************************* 상단 영역 CSS 코딩 구역 *************************************************/
+
+#top-area {
+   position: fixed;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    z-index: 9999999;
   }
 
-* body * {
-    outline: 2px dashed #ccc;
+.page-bx{
+    position: sticky;
 }
 
-.top-area{
-    height: 150px;
+.top-menu{
+    top: 20px;
+    left: 20px;
 }
 
-.page-area{
-    margin-top: 39px;
+.top-menu li {
+    font-family: "Lobster", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+}
+
+.toy02{
+    top: 20px;
+    left: 155px;
+}
+
+.toy02 a{
+    color: #7e7d7d;
 }
 
 .logobx-area{
-    margin-top: 39px;
-    height: 10px;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    right: 10px;
 }
 
 
+.mlogo img{
+    float: right;
+    height: 15%;
+    width: 15%;
+    box-sizing: border-box;
+    padding-right: 50px;
+}
 
 
-/* 메인파트 전체박스 */
+/************************************************* 메인 영역 CSS 코딩 구역 *************************************************/
+
 .main-area {
+    position: absolute;
+    height: 680px;
+}
+
+.main-bx{
+    height: 500px;
+}
+
+
+/* 인트로영역 이미지 */
+.intro-area {
+    height: 500px;
     padding: 80px;
     padding-bottom: 60px;
     background: url(../IMG/sub01_main.jpg) no-repeat center/cover;
