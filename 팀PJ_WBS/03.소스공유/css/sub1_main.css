@@ -120,3 +120,34 @@
     border-radius: 90%;
     background: #fff url(../IMG/logo_black.png) center center/no-repeat;
 }
+
+/* 트레일러 영역 */
+
+.trmovie-box {
+display: inline-flex;
+flex-direction: row;
+flex-wrap: wrap;
+
+padding-top: 30px;
+margin-left: 30px;
+
+}
+.trmovie h3 {
+    padding-bottom: 40px;
+    font-family: "Lobster", sans-serif;
+    font-size: 65px;
+    font-weight: 400;
+}
+
+.trmovie h4 {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 25px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.trmovie>iframe {
+    width: 50vw;
+    height: 60vh;
+}
