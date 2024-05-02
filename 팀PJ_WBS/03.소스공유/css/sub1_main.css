@@ -178,6 +178,23 @@ margin-left: 40px;
     position: relative;
     aspect-ratio: 1/1;
 }
+.cha-box>div p{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    line-height: 1.7;
+    box-sizing: border-box;
+    padding: 20px;
+    opacity: 0;
+    transition: .3s;
+}
+
+.cha-box>div:hover p{
+    opacity: 1;
+}
 
 .cha-box>div img {
     width: 100%;

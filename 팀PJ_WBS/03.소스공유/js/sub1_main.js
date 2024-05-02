@@ -70,6 +70,7 @@ for (let i = 1; i <= 8; i++) {
       <div>
         <img src="./IMG/img1/cha0${i}.jpg" alt="캐릭터">
         <h3>${sub1_data.chaData[i - 1].chaname}</h3>
+        <p>${sub1_data.chaData[i - 1].chaintro}</p>
       </div>
       `;
 
