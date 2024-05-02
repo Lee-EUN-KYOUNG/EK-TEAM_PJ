@@ -19,8 +19,8 @@ import * as sub1_data from "./sub1_data.js";
   
     sub1_data.clipData.forEach((v) => {
     hcode += `
-    <li class="trmovie">
     <h3>${v.title}</h3>
+    <li class="trmovie">
     <iframe src="https://www.youtube.com/embed/${v.mvid01}" autoplay="트레일러" controls=""></iframe>  
     <iframe src="https://www.youtube.com/embed/${v.mvid02}" autoplay="트레일러" controls=""></iframe>  
     <h4>

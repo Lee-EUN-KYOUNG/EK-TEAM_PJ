@@ -124,17 +124,25 @@
 /* 트레일러 영역 */
 
 .trmovie-box {
-display: inline-flex;
-flex-direction: row;
-flex-wrap: wrap;
-
+position: relative;    
 padding-top: 30px;
 margin-left: 30px;
-
 }
-.trmovie h3 {
+
+
+.trmovie {
+    top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0 30px;
+}
+
+.trintro h3 {
     padding-bottom: 40px;
     font-family: "Lobster", sans-serif;
+    text-decoration: underline;
     font-size: 65px;
     font-weight: 400;
 }
@@ -148,6 +156,7 @@ margin-left: 30px;
 }
 
 .trmovie>iframe {
-    width: 50vw;
-    height: 60vh;
+    width: 30vw;
+    height: 40vh;
+    padding-bottom: 30px;
 }
