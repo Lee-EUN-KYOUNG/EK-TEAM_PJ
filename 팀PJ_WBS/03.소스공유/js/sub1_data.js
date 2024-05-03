@@ -19,14 +19,6 @@ const clipData = [
       mvid01: "T_BXsjiFa0M",
       mvid02: "QqIRLEg521Y",
     },
-  /*   {
-      idx: "2",
-      title: "Design",
-      subintro: `The filmmakers assembled the Toy Story cast from a wealth of childhood memories.
-      But for the story to work, the two main characters needed to have their own chemistry.
-      Early versions of Woody included a ventriloquist's dummy and an ill-tempered cowboy before he became the affable hero seen on screen. Buzz Lightyear offered a different challenge: inventing a brand-new toy that instantly felt familiar.`,
-      mvid: "4n6u2CqlGPY",
-    }, */
   ];
 
   const designData = [
@@ -35,7 +27,7 @@ const clipData = [
       title01: "Design - Character",
       subintro: `The filmmakers assembled the Toy Story cast from a wealth of childhood memories. <br>
       But for the story to work, the two main characters needed to have their own chemistry. <br>
-      Early versions of Woody included a ventriloquist's dummy and an ill-tempered cowboy before he became the affable hero seen on screen. <br> Buzz Lightyear offered a different challenge: inventing a brand-new toy that instantly felt familiar`,
+      Early versions of Woody included a ventriloquist's dummy and an ill-tempered cowboy before he became the affable hero seen on screen. <br> Buzz Lightyear offered a different challenge : inventing a brand-new toy that instantly felt familiar`,
       mvid01: "4n6u2CqlGPY",
       mvid02: "z_FYmhkOf4Q",
     },
@@ -67,7 +59,7 @@ const chaData = [
     chaname: "Buzz Lightyear",
     chaintro: `
     This space ranger action figure has it all: a laser beam, karate-chop action, pop-out wings, and a belief that he's on a secret mission for Star Command. <br> 
-    Much to Woody's chagrin, Buzz monopolizes Andy's attention and becomes an instant favorite with his toymates`,
+    Much to Woody's chagrin, Buzz monopolizes Andy's attention and becomes an instant favorite with his toymates.`,
     },
     {
     idx: "3",
