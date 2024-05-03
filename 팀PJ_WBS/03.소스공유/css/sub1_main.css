@@ -213,3 +213,46 @@ margin-left: 40px;
     padding-top: 10px;
     padding-bottom: 5px;
   }
+
+/* 컨셉 이미지 파트 */
+
+ .pg {
+    height: 100vh;
+}
+
+  /* 타겟박스 */
+.tpg {
+    height: calc(100vh + 3000px);
+}
+/* 가로이동박스 */
+.slidech {
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: orange;
+}
+/* 실제로 가로이동할 ul박스 */
+.slidech ul {
+    position: relative;
+    left: 0;
+    display: flex;
+    width: calc(100vw + 3000px);
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: 0.5s ease-out;
+}
+.slidech ul li {
+    flex: 1;
+    text-align: center;
+}
+
+.slidech ul li img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    border-radius: 20px;
+}
