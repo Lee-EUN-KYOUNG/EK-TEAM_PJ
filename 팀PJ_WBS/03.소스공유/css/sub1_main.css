@@ -307,3 +307,34 @@ margin-left: 40px;
     opacity: 1;
     /*우선적용!*/
 }
+
+.grid {
+    display: grid;
+    /* 박스 중앙 최대 크기 지정 */
+    max-width: 1200px;
+    padding-top: 20px;
+    margin: 0 auto;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: min(1.5vw, 15px) min(1vw, 10px);
+}
+  .grid > div {
+    position: relative;
+    aspect-ratio: 1/1;
+  }
+  .grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    /* 블록 박스 이미지 하단 공백 제거 */
+    vertical-align: middle;
+  }
+.first{
+    grid-column: 1/3;
+    grid-row: 1/3;
+
+  }
+.second {
+    grid-column: 1/3;
+    grid-row: 3/5;
+}

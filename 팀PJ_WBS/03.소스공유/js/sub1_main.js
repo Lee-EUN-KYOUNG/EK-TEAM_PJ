@@ -115,7 +115,6 @@ function loadFn() {
   // 블릿의 li까지 수집! indic 변수
   indic = document.querySelectorAll('.indic li');
 
-
   // 2. 버튼을 모두 이벤트 설정하기
   for (let x of abtn) {
     x.onclick = goSlide;
@@ -124,14 +123,14 @@ function loadFn() {
   // 광클 금지 변수
   let prot = false;
   /***************************************************************************************************************
-          함수명 : goSlide
-          기능 : 슬라이드 이동
+                                          함수명 : goSlide
+                                          기능 : 슬라이드 이동
   ***************************************************************************************************************/
 
   function goSlide(evt,sts=true){
 
     
-    console.log('전달변수:',evt,sts);
+    //console.log('전달변수:',evt,sts);
     
     // 만약 버튼 클릭일 경우 인터발 지우기 함수 호출
     if(sts){
@@ -226,7 +225,7 @@ function autoSlide(){
 //////////// 인터발 지우기 함수 /////////////////
 function clearAuto(){
 
-   console.log('인터발 지워');
+   //console.log('인터발 지워');
 
    clearInterval(autoI);
 
@@ -238,7 +237,22 @@ function clearAuto(){
 } ///////// clearAuto함수
 
 } //////////////// loadFn 함수 ///////////////
-/////////////////////////////////////////////
+////////////////////// 컨셉 영역 코딩 끝
+
+////////////////////// 배경파트 코딩 시작 //////////////////////////////////
+const grid = qs(".grid");
+
+// 20개 이미지 넣기
+for (let i = 1; i <= 19; i++) {
+  grid.innerHTML += `
+      <div class="
+      <div ${
+        i === 1 ? 'class="first"' : i === 8 ? 'class="second"' : ""
+      }>
+          <img src="IMG/img1/bged${i}.jpg" alt="bg">
+      </div>
+      `;
+} //////// for /////////
 
 
 
