@@ -1,0 +1,476 @@
+@charset "utf-8";
+
+@import url(./reset.css);
+@import url(./common.css);
+@import url(./core.css);
+@import url(./grid_12_flex.css);
+
+  /* font-family: "Dancing Script", cursive;
+    font-family: "Lugrasimo", cursive;
+font-family: "Pacifico", cursive;
+font-family: "Lobster", sans-serif;
+  */
+/**************** 공통영역 ****************/
+#GNB{
+  position: absolute;
+  z-index: 1000;
+}
+.ts{
+  display: none;
+}
+html{  
+  scroll-behavior: smooth;
+}
+body{
+  overflow: hidden;
+}
+/* 공사중 표시 */
+body * {
+  /* outline: 2px dashed #ccc; */
+}
+
+strong{
+  font-weight: bold;
+}
+/* 스크롤바 디자인 클래스 */
+.content-box::-webkit-scrollbar{
+  width: 0;
+}
+
+.ibx {
+  max-width: 1920px;
+  margin: 0 auto;
+  height: 100vh;
+  position: relative;
+}
+.flex-column{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.flex-row{
+  position: relative;
+  /* padding: 0 150px 0 30px; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items:center;
+}
+.sub-text{
+  font-family: "Lugrasimo", cursive;
+  font-size: 20px;
+}
+.sub-tit{
+  font-family: "Dancing Script", cursive;
+  font-size: 60px;
+  font-weight: bold;
+}
+.main-tit2{
+  padding-top: 60px;
+ margin-bottom: 60px;
+ color: #fff;
+ text-align: center;
+ width: 100%;
+}
+.main-tit{
+  font-family: "Dancing Script", cursive;
+  font-size: 60px;
+  font-weight: bold;
+}
+.main-text {
+  font-family: "Lugrasimo", cursive;
+  font-size: 20px;
+  line-height: 1.5;
+  white-space: wrap;
+}
+/**************** gnb 인딕 고정 박스 ****************/
+#side-area{
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+}
+
+.gnb{
+  position: absolute;
+  right: 1vw;
+  top: 30vh;
+}
+.gnb ul li{
+  margin: 5px 0 ;
+  text-align: center;
+  background-color: #0000003f;
+  border-radius: 20px;
+}
+.gnb ul li.on a{
+  color: yellow;
+}
+.gnb ul li a{
+  padding: 0 10px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+/********************* 백그라운드 영역 *********************/
+#logo-area {
+  background: url(../IMG/img2/bg_sky.jpg) no-repeat
+    center/cover;
+}
+#summary-area{
+  background: url(../IMG/img2/bg_summary.jpg) no-repeat
+  center/cover;
+}
+#trailers-area{
+  background: url(../IMG/img2/bg_TRAILERS.png) no-repeat
+  center/cover;
+}
+#character-design-area{
+  background: url(../IMG/img2/bg_CHARACTERDESIGN.jpg) no-repeat
+  center/cover;
+}
+#world-design-area{
+  background: url(../IMG/img2/bg_WORLDDESIGN.jpg) no-repeat
+  center/cover;
+}
+#awards-area{
+  background: url(../IMG/img2/bg_AWARDS.jpg) no-repeat
+  center/cover;
+}
+#credits-area{
+  background: url(../IMG/img2/bg_CREDITS.jpg) no-repeat
+  center/cover;
+}
+#footer-area{
+  background: url(../IMG/img2/bg_THANKS.jpg) no-repeat
+  center/cover;
+}
+
+
+
+/*************** 상단 로고영역 ***************/
+.logo {
+  position: relative;
+  max-width: 600px;
+  height: 100%;
+  /* aspect-ratio: 453/662; */
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.logo a {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.5s ease-in-out;
+}
+.logo a:first-child:hover {
+  transition: 0.3s ease-in-out;
+  transform: translateY(-50%) rotateX(-10deg) rotateY(20deg) scale(1.1);
+}
+.logo a img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+}
+.logo a:last-child {
+  text-align: center;
+  top: -200%;
+}
+.logo a:last-child img{
+  width: 100%;
+  height: 100%;
+  max-height: 600px;
+  max-width: 400px;
+  object-fit: contain;
+}
+.logo a:last-child.show {
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* 줄거리 영역 */
+.sum-text {
+  position: relative;
+  margin: 0 auto;
+  bottom: 0;
+  height: 100vh;
+  padding: 0 10%;
+}
+.sum-text p {
+  position: relative;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #00000085;
+  color: #fff;
+  padding: 5% 10%;
+  border-radius: 50px;
+}
+.sum-text a:first-child h1{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+}
+.sum-text a:first-child{
+  transition: .5s;
+}
+.sum-text a:last-child{
+  position: relative;
+  transition: .5s;
+  opacity: 0;
+  pointer-events: none;
+}
+.sum-text a:last-child.show{
+  pointer-events: painted;
+  transition: .5s;
+  opacity: 1;
+}
+.sum-text a:first-child.show{
+  pointer-events: none;
+  transition: .5s;
+  opacity: 0;
+}
+.summary-click h1{
+  transition: .3s;
+}
+.summary-click:hover h1{
+  color: #56a5cc !important;
+  transition: 0.3s ease-in-out;
+  transform: translate(-50%, -50%) rotateX(-10deg) rotateY(20deg) scale(1.1)!important;
+}
+/******************* 2.트레일러 영역 *******************/
+.content-box2{
+  margin: 0 auto;
+  overflow: hidden;
+}
+.trailers-box {
+  position: relative;
+  display: flex;
+  /* left: 0; */
+}
+.trailer {
+  flex: 0 0 100%; 
+}
+.trailer video {
+  display: block;
+  margin: 0 auto;
+  max-width: 1080px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1280/720;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+}
+
+/* 버튼 */
+.trail-button{
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+.abtn{
+  padding: 20px 40px;
+  color: #fff;
+  font-size: 50px;
+  text-shadow:
+  2px 0px #ffe861,
+  -2px 0px #ffe861,
+  0px 2px #ffe861,
+  0px -2px #ffe861;
+  transition: .3s;
+}
+.abtn:hover{
+  color: #ffe861;
+}
+.ab1{
+  rotate: 180deg;
+}
+.ab2{
+}
+/*************** 3,4 공통영역 ***************/
+/* 캐릭터 menu list */
+.menu{
+  position: absolute;
+  width: 250px;
+  left: 30px;
+  /* top: 50vh;
+  transform: translateY(50vh); */
+  top: 50%;
+  transform: translateY(-50%);
+}
+.menu ul li a{
+  color: #fff;
+  font-size: 30px;
+  line-height: 2;
+}
+.menu ul li.show a{
+  color: yellow;
+}
+/* 캐릭터별 메인콘텐트 
+- 부모설정 필요없어짐*/
+.main-cont{
+  margin: 0 auto;
+}
+/* 앱솔루트설정박스 
+- dn설정으로 앱솔설정 필요없어짐 */
+.ab-box{
+  display: none;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  margin-left: 250px;
+  margin-right: 150px;
+}
+.ab-box.show{
+  display: flex;
+}
+/* 공통 -  정보박스 */
+.info-box{
+  flex-direction: column;
+  display: flex;
+  color: #fff;
+  max-width: 600px;
+  height: 100%;
+  margin: 0 30px;
+}
+.info-text{
+  max-width: 600px;
+  margin-top: 30px;
+}
+/* 공통 - 그리드 겔러리 박스 */
+.grid-img{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-img a{
+ aspect-ratio: 1/1;
+ max-width: 200px;
+ max-height: 200px;
+ /* overflow: hidden; */
+}
+.grid-img a img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/******************* 3.캐릭터 영역 *******************/
+/* 개별 - 캐릭터정보 이미지를 가두는 박스 */
+.char-img {
+  max-height: 350px;
+  max-width: 300px;
+  margin:0 auto ;
+}
+.char-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/******************* 4.월드 영역 *******************/
+/* 없어도되지요~~~~~~ */
+/******************* 5 & 6 . 어워즈 & 크레딧 영역 공통 *******************/
+.content-box{
+  height: 100%;
+  width: 50vw;
+  margin: 0 auto;
+  overflow: auto;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #00000073;
+  text-align: center;
+}
+.credits-text p,.awards-text p{
+  margin: 25px 0;
+  line-height: 1.5;
+}
+.credits-text p:last-child,.awards-text p:last-child{
+  padding-bottom: 150px;
+}
+/******************* 7.하단 영역 *******************/
+.footer-area{
+  height: 100vh;
+  position: relative;
+}
+@media screen and (max-width: 1000px) {
+  .main-tit2{
+    font-size: 40px;
+  }
+  .gnb{
+    top: 40vh;
+    /* bottom: 0vh; */
+  }
+  .gnb ul {
+    /* gap: 10px; */
+  }
+  .gnb ul li {
+    margin: 10px 0;
+  }
+  .gnb ul li a {
+    font-size: 10px;
+  }
+  .flex-row {
+    align-items: flex-start
+  }
+  .content-box2{
+    position: relative;
+    top: 50%;
+    transform: translate(0, -75%);
+  }
+.trailers-box{
+
+}
+.grid-img{
+  display: none;
+}
+.ab-box {
+  margin: 0 auto;
+}
+.char-img {
+  max-width: 150px;
+}
+.main-cont{
+
+}
+.menu{
+  position: relative;
+  top: 0;
+  left: 2vw;
+  transform: translateY(0);
+}
+.menu ul li a {
+  font-size: 20px;
+  line-height: 2;
+  white-space: nowrap;
+}
+.content-box{
+  width: 80vw;
+}
+.main-text p{
+  font-size: 15px;
+  margin: 15px 0;
+}
+.info-box {
+  margin: 0 100px 0 10px;
+}
+}
+@media screen and (max-width: 500px){
+  .info-box {
+    margin: 0 50px 0 10px;
+  }
+  .flex-row {
+  }
+  .menu{
+    /* width: 100%; */
+  }
+  .menu ul{
+    /* display: flex;
+    flex-wrap: wrap; */
+  }
+}

@@ -1,0 +1,379 @@
+@charset "utf-8";
+
+
+@import url(./reset.css);
+@import url(./common.css);
+@import url(./core.css);
+@import url(./grid_12_flex.css);
+
+/* 공사중 표시 */
+body * {
+    /* outline: 2px dashed #ccc; */
+}
+body>* {
+  overflow-x: hidden;
+}
+
+body{
+    margin: 0 auto;
+    background-color: rgba(0, 100, 0, 0.678);
+    font-family: "Lugrasimo", cursive;
+}
+
+
+/* 중앙속박스 */
+.inbox{
+    /* 최대가로크기 */
+    max-width: 1360px;
+    padding: 0 20px;
+    /* 블록박스 중앙정렬 -> 마.영.오! */
+    margin: 0 auto;    
+}
+
+.intro-area{
+    height: 100vh;
+}
+.char-area{
+    height: 100vh;
+    position: relative;
+}
+.video-area{
+  height: 100vh;
+  position: relative;
+}
+#char-area{
+   content: '';
+   background: url(../IMG/img3/world_head.jpg)no-repeat center/cover;
+   
+ 
+   /* opacity: 0.7; */
+   z-index: -1;
+}
+.bg-video{
+    position: absolute;
+    height: 100%;
+     width: 100%;
+     z-index: -2;
+     overflow: hidden;
+     filter: brightness(.7);
+     background: url(../IMG/img3/character.jpg)no-repeat center/cover;
+     
+ }
+ .bgvideo{
+     height: 100%;
+     width: 100%;
+     
+     object-fit: cover;
+ }
+
+ /* 메인로고 */
+ .toy-3rd-logo{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);   
+    white-space: nowrap;
+ }
+ .toy-3rd-logo img{
+    scale: 0.8;
+ }
+ /* 시놉시스박스 */
+ .sino-box{
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    display: flex;
+    top: 55%;
+    height: 300px;
+    /* width: 90vw;
+    height: 300px;
+    background-color: #b4b4b4ab; */
+    z-index: 9999;
+
+   
+
+ }
+ .sino-box span{
+ 
+    color: #fff;
+    font-size: 2.5rem;
+    line-height: 1.5;
+    padding: 10px;
+    font-weight: bold;
+
+    border-radius: 10px;
+    background-color: #4747479c;
+    padding-top: 1%;
+    padding-bottom: 1%;
+
+    max-width:90vw;
+    height: 300px;
+    
+    
+ }
+/* 서브타이틀 */
+ .sub-tit{
+  top: 2%;
+   position: relative;
+   text-align: center;
+   font-size: 4.3rem;
+   margin: 10px 0;
+   padding: 5px 0;
+   z-index: 1;
+   font-weight: bold;
+   color: #fff;
+   /* text-shadow: 3px 0 #000, -3px 0 #f00, 0 3px #fff700, 0 -3px #0064ff; */
+  /* background-color: yellow; */
+ }
+ /* 캐릭터 설명 */
+ .char-box{
+  padding-top: 2%;
+ }
+ /* 캐릭터 선택 버튼 */
+ .char-btn{
+  position: absolute;
+  display: flex;
+  /* margin-top: 40%; */
+  top: 50%;
+  left: 20%;
+  margin-right: 5px;
+  margin-left: 5px;
+  transform: translate(-50%,-50%);
+   
+ }
+
+ .indic{
+    display: flex;
+    position: relative;
+    top: 5%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 28px 0;
+    width: 50%;
+ }
+ .indic span{
+   font-size: 2.5rem;
+   color: #fff;
+   font-weight: bold;
+   text-shadow: 1px 1px 1px #000;
+  
+ }
+ .indic li{
+   
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+    align-items: center;
+
+   position: relative;
+    width: 20vw;
+    height: 10vh;
+   opacity: 0.7;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 2px solid #c2c2c2;
+    border-radius: 19px;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+    
+    transition: 0.3s;
+    cursor: pointer;
+ }
+ .indic img{
+    width: 20vw;
+    position: absolute;
+    z-index: -1;
+    
+ }
+ .indic li:hover{
+   opacity: 1;
+   border: 2px solid yellow;
+ }
+ .indic li.on{
+   opacity: 1;
+   border: 2px solid yellow;
+   z-index: 1;
+ }
+ 
+/* 배너 페이드 onoff */
+ .char-banner li{
+   display: flex;
+
+    /* 모두 투명 */
+   opacity: 0;
+   /* 트랜지션 */
+   transition: opacity .6s ease-in-out;
+ }
+ .char-banner li.on{
+   opacity: 1;
+   z-index: 1;
+    
+ }
+ .abtn{
+    display: none;
+ }
+ /* 배너 디자인 */
+.char-banner li{
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%,-50%);
+}
+ .char-banner img{
+    width: 60vw;
+    border-radius: 10px;
+    border: 5px solid rgb(248, 248, 248);
+   
+ }
+ .char-banner p{
+   margin: 0 auto;
+   margin-top: 1%;
+
+   
+   max-width: 900px;
+   
+   font-size: 1.8rem;
+   padding-top: 1%;
+   padding-bottom: 1%;
+   font-weight: bold;
+   line-height: 1.5;
+   color: #fff;
+   text-shadow: 1px 1px 1px #000;
+   border-radius: 10px;
+   background-color: rgba(0, 0, 0, 0.473);
+ }
+
+
+
+ /* 트레잉ㄹ러 영역 */
+ .video-banner{
+  display: flex;
+  justify-content: center;
+ }
+
+ .video-banner li{
+  top: 11%;
+  position: absolute;
+  /* display: inline-block; */
+  /* text-align: center; */
+  /* width: 1000px; */
+ 
+   
+ }
+
+
+ .video-banner li img{
+  width: 100%;
+  height: 100%;
+  border: 5px solid rgb(248, 248, 248);
+
+  object-fit: cover;
+ }
+ .video-banner li a{
+  width: 100%;
+  height: 100%;
+ }
+
+ .video-btn{
+  position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* height: 74px; */
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    
+ }
+ .v-indic{
+  
+    display: flex;
+    justify-content: center;
+    gap: 20%;
+    width: 50%;
+    padding: 15px;
+    box-sizing: border-box;
+    
+ }
+
+ .v-indic li img{
+  width: 250px;
+  border-radius: 10px;
+  border: 5px solid rgb(248, 248, 248);
+ opacity: 0.7;
+ }
+
+ .video-banner li{
+  opacity: 0;
+  z-index: 1;
+ }
+ .video-banner li.on{
+  opacity: 1;
+  z-index: 1;
+ }
+
+ 
+ .v-indic li.on img{
+  opacity: 1;
+   border: 5px solid yellow;
+ }
+ .v-indic li:hover img{
+  opacity: 1;
+  border: 5px solid yellow;
+ }
+
+ /*이동버튼*/
+.avbtn {
+  position: absolute;
+  top: 38%;
+  transform: translateY(-50%);
+ 
+}
+/*왼쪽버튼*/
+.ab1 {
+  left: 20px;
+}
+
+/*오른쪽버튼*/
+.ab2 {
+  right: 20px;
+}
+
+#video-area{
+  content: '';
+  background: url(../IMG/img3/creditshead.jpg)no-repeat center/cover;
+  /* position: absolute; */
+  
+  /* opacity: 0.7; */
+  z-index: -1;
+}
+
+
+/************************** 미디어 쿼리 **************************/
+
+@media screen and (max-width: 1200px) {
+  .avbtn{
+    /* 트레일러 방향 버튼 x */
+    display: none;
+  }
+
+  .sino-box span{
+   font-size: 2rem;
+    height: 220px;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .char-banner li{
+      
+    }
+    .char-banner p{
+      
+    }
+}
+@media screen and (max-width: 1000px) {
+  .sino-box span{
+   font-size: 2rem;
+    height: 220px;
+    }
+}
