@@ -33,14 +33,14 @@
 
 /************************************************* 메인 영역 CSS 코딩 구역 *************************************************/
 
-/* .main-area {
-   position: fixed;
+#main-area {
+   position: relative;
     height: 680px;
 }
 
 .main-bx{
     height: 500px;
-} */
+}
 
 
 /* 인트로영역 이미지 */
@@ -302,23 +302,41 @@ padding-top: 35px;
 padding-bottom: 10px;
 }
 
-.footer-area{
-    position: fixed;
-    padding-top: 20px;
-    padding-bottom: 80px;
+
+#footer-area{
+    position: relative;
 }
+
+
 .footer-bx{
-    padding-top: 20px;
-    padding-bottom: 80px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: center;
 }
 
 .sns-box ul{
     display: flex;
     flex-wrap: wrap;
     gap: 0 15px;
+    justify-content: center
 }
 .sns-box a{
-    font-size: 1.4rem;
+    margin: 0 auto;
+    font-size: 25px;
     line-height: 2.5;
     white-space: nowrap;
+}
+
+.fcont-part{
+    font-size: 15px;
+    line-height: 1.5;
+    white-space: nowrap;
+}
+
+.corp-part{
+    font-family: "Lugrasimo", cursive;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 2.8;
+    text-align: center;
 }
