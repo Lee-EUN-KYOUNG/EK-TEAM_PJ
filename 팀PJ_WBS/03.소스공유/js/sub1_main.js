@@ -246,10 +246,12 @@ const grid = qs(".grid");
 for (let i = 1; i <= 19; i++) {
   grid.innerHTML += `
       <div ${
-        i === 1 ? 'class="first"' : i === 8 ? 'class="second"' : ""
+        i === 1 ? 'class="first"' : i === 8 ? 'class="second"' : 
+        i === 15? 'class="third"' : i === 18? 'class="fourth"':""
       }>
           <img src="./IMG/img1/bged${i}.jpg" alt="bg">
       </div>
+
       `;
 } //////// for /////////
 
