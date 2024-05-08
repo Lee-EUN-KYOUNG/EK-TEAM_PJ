@@ -1,6 +1,7 @@
 
 @import url(./reset.css);
 @import url(./common.css);
+@import url(./grid_12_flex.css);
 
 /* 폰트 연결 */
 /* 1.Dancing Script : 디즈니 스러운 손글씨 */
@@ -32,14 +33,14 @@
 
 /************************************************* 메인 영역 CSS 코딩 구역 *************************************************/
 
-.main-area {
-    position: absolute;
+/* .main-area {
+   position: fixed;
     height: 680px;
 }
 
 .main-bx{
     height: 500px;
-}
+} */
 
 
 /* 인트로영역 이미지 */
@@ -301,10 +302,23 @@ padding-top: 35px;
 padding-bottom: 10px;
 }
 
-#footer-area{
+.footer-area{
+    position: fixed;
     padding-top: 20px;
     padding-bottom: 80px;
 }
 .footer-bx{
+    padding-top: 20px;
+    padding-bottom: 80px;
+}
 
+.sns-box ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 15px;
+}
+.sns-box a{
+    font-size: 1.4rem;
+    line-height: 2.5;
+    white-space: nowrap;
 }

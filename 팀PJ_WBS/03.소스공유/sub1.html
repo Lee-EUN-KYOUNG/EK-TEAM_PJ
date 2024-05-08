@@ -18,7 +18,7 @@
     <!-- 3.리액트 바벨 라이브러리 -->
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <!-- 서브1 메인 JS 불러오기 : 모듈로 불러오기 -->
-    <script type="module" src="./js/sub1_main.js" defer></script>
+    <script type="module" src="./js/sub1_main.js" type="module"></script>
     <link rel="stylesheet" href="./css/sub1_main.css" />
     <!-- 폰트어썸 아이콘CSS -->
     <link
@@ -98,73 +98,62 @@
       </main>
     </div>
     <!-- 하단 영역 -->
-    <div class="footer-area">
+    <div id="footer-area">
       <footer class="footer-bx">
-        <!-- SNS 영역 -->
-        <div class="sns-part">
-          <aside class="sns-box">
-            <ul>
-              <li>
-                <a href="#" class="fa-brands fa-instagram">
-                  <span class="ir"> 인스타그램 </span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="fa-brands fa-facebook">
-                  <span class="ir"> 페이스북 </span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="fa-brands fa-twitter">
-                  <span class="ir"> 트위터 </span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="fa-brands fa-youtube">
-                  <span class="ir"> 유튜브 </span>
-                </a>
-              </li>
-            </ul>
-          </aside>
-        </div>
-        <!-- 정책약관 영역 -->
-        <div class="fcont-part">
-          <aside class="info-link">
-            <ul>
-              <li>
-                <a href="#"></a>
-              </li>
-              <li>
-                <a href="#"></a>
-              </li>
-              <li>
-                <a href="#"></a>
-              </li>
-              <li>
-                <a href="#"></a>
-              </li>
-              <li>
-                <a href="#"></a>
-              </li>
-            </ul>
-          </aside>
-        </div>
-        <!-- 다른 서브파트가기 영역 -->
-        <div class="gosub-part">
-          <select name="subp" id="another">
-            <option value="gomain">메인</option>
-            <option value="gosub">서브</option>
-          </select>
-          <select name="corp" id="corp">
-            <option value="어쩌구">TOY STORY 01</option>
-            <option value="어쩌구">TOY STORY 02</option>
-            <option value="어쩌구">TOY STORY 03</option>
-            <option value="어쩌구">TOY STORY 04</option>
-          </select>
-        </div>
-        <!-- 저작권 표시 영역 -->
-        <div class="corp-part">
-          <address class="corp-info">© 1986-2024 DISNEY / PIXAR</address>
+        <div class="col-12">
+          <!-- SNS 영역 -->
+          <div class="sns-part">
+            <aside class="sns-box">
+              <ul>
+                <li>
+                  <a href="#" class="fa-brands fa-instagram">
+                    <span class="ir"></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="fa-brands fa-facebook">
+                    <span class="ir"> </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="fa-brands fa-twitter">
+                    <span class="ir"></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="fa-brands fa-youtube">
+                    <span class="ir"></span>
+                  </a>
+                </li>
+              </ul>
+            </aside>
+          </div>
+          <!-- 정책약관 영역 -->
+          <div class="fcont-part">
+            <aside class="info-link">
+              <ul>
+                <li>
+                  <a href="#">PRIVACY POLICY</a>
+                </li>
+                <li>
+                  <a href="#">TERMS OF USE</a>
+                </li>
+                <li>
+                  <a href="#">YOUR US STATE PRIVACY RIGHTS</a>
+                </li>
+                <li>
+                  <a href="#">CHILDREN’S ONLINE PRIVACY POLICY</a>
+                </li>
+                <li>
+                  <a href="#">INTEREST-BASED ADS</a>
+                </li>
+              </ul>
+            </aside>
+          </div>
+          <!-- 저작권 표시 영역 -->
+          <div class="corp-part">
+            <address class="corp-info">© 1986-2024 DISNEY / PIXAR</address>
+          </div>
         </div>
       </footer>
     </div>
