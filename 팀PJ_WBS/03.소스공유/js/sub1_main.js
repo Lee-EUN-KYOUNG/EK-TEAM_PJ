@@ -6,6 +6,13 @@ import mFn from "./my_function.js";
 // 데이터 셋팅 불러오기
 import * as sub1_data from "./sub1_data.js";
 
+import spreadCommon from "./sub_spread_common.js";
+spreadCommon();
+
+import goSub from "./gosub.js";
+goSub();
+
+
 //////////////////////////////////// 데이터 코딩 구역 ////////////////////////////////////////
 
   // 인트로 파트 영역 시작 //
