@@ -576,8 +576,10 @@ padding-bottom: 10px;
     line-height: 1;
   }
   
-  
-  
+  .grid{
+    max-width: 780px;
+    margin-left: 20px;
+    }
   
   }
    /********* 최대사이즈 600px 이하 끝 *********/
